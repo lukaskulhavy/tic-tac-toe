@@ -29,4 +29,11 @@ Everything lives in a single file: `tictactoe.html` (HTML + CSS + JS, no depende
 
 ## Git workflow
 
-Commit and push every meaningful change to `origin/main` (https://github.com/lukaskulhavy/tic-tac-toe). Keep commits focused and messages descriptive.
+After every meaningful change — new feature, bug fix, refactor — commit and push to `origin/main` (https://github.com/lukaskulhavy/tic-tac-toe). Never batch unrelated changes. This keeps a clean history and ensures work is never lost.
+
+Commit message format:
+- Subject line: short imperative summary (e.g. `Fix win detection for draw state`)
+- Body (optional): explain *why*, not just *what*
+- Always append: `Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>`
+
+Push immediately after each commit so GitHub always reflects the latest state.
