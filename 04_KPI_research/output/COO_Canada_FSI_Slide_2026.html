@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canadian FSI COO — What's Keeping the Role Busy in 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .slide {
+    width: 1280px;
+    min-width: 1280px;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: #1a2e4a;
+    color: white;
+    padding: 22px 36px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-title { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+  .header-title span { color: #7eb8e8; }
+  .header-meta { font-size: 11px; color: #8aa8c4; text-align: right; line-height: 1.7; }
+
+  /* ── QUADRANT GRID ── */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    flex: 1;
+    gap: 2px;
+    background: #dde2e9;
+    padding: 2px;
+    padding-bottom: 0;
+  }
+
+  .quadrant {
+    background: #ffffff;
+    padding: 20px 24px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .q-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2px;
+  }
+  .q-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .q-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #1a2e4a;
+  }
+
+  /* Quadrant accent colours */
+  .q1 .q-icon { background: #e8f0fb; color: #2563eb; }
+  .q2 .q-icon { background: #fef3e2; color: #d97706; }
+  .q3 .q-icon { background: #f0fdf4; color: #16a34a; }
+  .q4 .q-icon { background: #fdf2f8; color: #9333ea; }
+
+  .q1 .q-title { color: #2563eb; }
+  .q2 .q-title { color: #d97706; }
+  .q3 .q-title { color: #16a34a; }
+  .q4 .q-title { color: #9333ea; }
+
+  .bullet-list { display: flex; flex-direction: column; gap: 7px; }
+
+  .bullet {
+    display: flex;
+    gap: 9px;
+    font-size: 12px;
+    color: #374151;
+    line-height: 1.45;
+  }
+  .bullet-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  .q1 .bullet-dot { background: #2563eb; }
+  .q2 .bullet-dot { background: #d97706; }
+  .q3 .bullet-dot { background: #16a34a; }
+  .q4 .bullet-dot { background: #9333ea; }
+
+  .tag {
+    display: inline-block;
+    font-size: 9.5px;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 4px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+  }
+  .tag-committed { background: #dbeafe; color: #1d4ed8; }
+  .tag-deadline  { background: #fee2e2; color: #b91c1c; }
+  .tag-direction { background: #f3f4f6; color: #6b7280; }
+
+  /* ── AI STRIP ── */
+  .ai-strip {
+    background: #0f1f35;
+    padding: 16px 28px;
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .ai-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 24px;
+    margin-right: 24px;
+    border-right: 1px solid #2a4060;
+    min-width: 140px;
+  }
+  .ai-label-top {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7eb8e8;
+    margin-bottom: 3px;
+  }
+  .ai-label-main {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+  }
+  .ai-label-sub {
+    font-size: 10px;
+    color: #5d8ab0;
+    margin-top: 3px;
+  }
+
+  .ai-cards {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+    align-items: stretch;
+  }
+
+  .ai-card {
+    background: #1a2e4a;
+    border-radius: 5px;
+    padding: 10px 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .ai-card-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #7eb8e8;
+  }
+
+  .ai-card-items { display: flex; flex-direction: column; gap: 4px; }
+
+  .ai-card-item {
+    font-size: 11px;
+    color: #c8dcea;
+    line-height: 1.4;
+    display: flex;
+    gap: 7px;
+  }
+  .ai-card-item::before {
+    content: '›';
+    color: #4d9ed4;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #f8f9fb;
+    border-top: 1px solid #e5e7eb;
+    padding: 8px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-note { font-size: 9.5px; color: #9ca3af; }
+  .footer-legend { display: flex; gap: 14px; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 9.5px; color: #6b7280; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="header-title">Canadian FSI <span>COO</span> — What's Keeping the Role Busy in 2026</div>
+    </div>
+    <div class="header-meta">
+      Role: Chief Operating Officer &nbsp;|&nbsp; Geography: Canada (FSI)<br>
+      Research: May 2026 &nbsp;|&nbsp; Sources: Investor Days, Earnings, OSFI, Industry Reports
+    </div>
+  </div>
+
+  <!-- QUADRANT GRID -->
+  <div class="grid">
+
+    <!-- Q1: Cost & Efficiency -->
+    <div class="quadrant q1">
+      <div class="q-header">
+        <div class="q-icon">💰</div>
+        <div class="q-title">Cost &amp; Efficiency</div>
+      </div>
+      <div class="bullet-list">
+        <div class="bullet"><div class="bullet-dot"></div><div>TD committed to <strong>$500M run-rate expense reduction in FY2026</strong> — first tranche of $2–2.5B program by FY2029<span class="tag tag-committed">Committed</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div>RBC targeting <strong>sub-40% efficiency ratio by 2027</strong> (from ~42% today); 17%+ ROE committed for FY2026<span class="tag tag-committed">Committed</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div>CIBC leads Big 6 at <strong>51.6% efficiency ratio</strong> (Q1 2026 actual); BMO at 57.8% with improvement as stated priority</div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div>Sector-wide shift: from broad transformation programs → <strong>disciplined execution and measurable productivity delivery</strong><span class="tag tag-direction">Direction</span></div></div>
+      </div>
+    </div>
+
+    <!-- Q2: Operational Resilience -->
+    <div class="quadrant q2">
+      <div class="q-header">
+        <div class="q-icon">🛡</div>
+        <div class="q-title">Operational Resilience</div>
+      </div>
+      <div class="bullet-list">
+        <div class="bullet"><div class="bullet-dot"></div><div><strong>OSFI E-21</strong> full compliance deadline: <strong>September 1, 2026</strong> — critical operations mapping, impact tolerances, recovery plans<span class="tag tag-deadline">Hard Deadline</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div><strong>OSFI B-10</strong> (Third-Party Risk) legacy contract reviews ongoing through 2026 — all vendor arrangements in scope, not just outsourcing<span class="tag tag-deadline">Hard Deadline</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div><strong>Real-Time Rail (RTR)</strong>: Q3 2026 target launch — core system readiness for ISO 20022, 24/7 instant settlement<span class="tag tag-committed">Committed</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div>Cybersecurity: unified security platforms and AI-powered threat detection named top IT investment priority across Big 6<span class="tag tag-direction">Direction</span></div></div>
+      </div>
+    </div>
+
+    <!-- Q3: People & Org Change -->
+    <div class="quadrant q3">
+      <div class="q-header">
+        <div class="q-icon">👥</div>
+        <div class="q-title">People &amp; Org Change</div>
+      </div>
+      <div class="bullet-list">
+        <div class="bullet"><div class="bullet-dot"></div><div><strong>Major leadership transitions</strong> at the COO level: TD new COO (Sep 2025), Scotiabank new CSO/COO (Dec 2025), CIBC COO vacant, NBC IT&amp;O restructured across 3 executives</div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div>Operating model redesign underway: TD evolving branches into <strong>advice centres</strong>; RBC created standalone AI Group — signals structural separation of AI from T&amp;O<span class="tag tag-direction">Direction</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div>Reskilling pressure: 59% of Canadian enterprise leaders expect current employee skills to be <strong>obsolete by 2030</strong> — COOs own the workforce transition<span class="tag tag-direction">Direction</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div>RBC targeting <strong>mid single-digit growth in senior leaders</strong> as talent investment accelerates under new strategy<span class="tag tag-committed">Committed</span></div></div>
+      </div>
+    </div>
+
+    <!-- Q4: Digital & Payments -->
+    <div class="quadrant q4">
+      <div class="q-header">
+        <div class="q-icon">⚡</div>
+        <div class="q-title">Digital &amp; Payments</div>
+      </div>
+      <div class="bullet-list">
+        <div class="bullet"><div class="bullet-dot"></div><div><strong>Open Banking Phase 1</strong> (read access) targeted for 2026 under Consumer-Driven Banking Act (Bill C-15, Royal Assent Mar 2026) — implementation at risk, screen scraping ban active<span class="tag tag-deadline">Regulatory</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div><strong>Real-Time Rail</strong> industry testing underway (Q1 2026) — COOs managing legacy core system integration for RTR readiness<span class="tag tag-committed">Committed</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div>Open Banking Phase 2 (write access, payment initiation) targeted <strong>mid-2027</strong> — architecture investment required now<span class="tag tag-direction">Direction</span></div></div>
+        <div class="bullet"><div class="bullet-dot"></div><div>Cloud migration delivering avg. <strong>30% cost reduction</strong> vs. on-premise — national banks accelerating workload migration as efficiency lever<span class="tag tag-direction">Direction</span></div></div>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+
+  <!-- AI STRIP -->
+  <div class="ai-strip">
+    <div class="ai-label">
+      <div class="ai-label-top">Dedicated Focus</div>
+      <div class="ai-label-main">AI &amp;<br>Automation</div>
+      <div class="ai-label-sub">Committed targets + emerging patterns</div>
+    </div>
+    <div class="ai-cards">
+      <div class="ai-card">
+        <div class="ai-card-title">Committed Targets</div>
+        <div class="ai-card-items">
+          <div class="ai-card-item">RBC: <strong>$1B AI enterprise value</strong> by 2027 (Investor Day); +15% revenue per $ of tech investment YoY</div>
+          <div class="ai-card-item">TD: <strong>$500M AI value in FY2026</strong>; $1B by FY2028 — 50% from revenue generation, 50% cost savings</div>
+          <div class="ai-card-item">CIBC: <strong>600,000+ hours</strong> saved via AI platform (scaling target active)</div>
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-title">Operational Deployment</div>
+        <div class="ai-card-items">
+          <div class="ai-card-item">Mortgage approvals: TD reduced review time from hours to minutes via AI adjudication</div>
+          <div class="ai-card-item">Active use cases: fraud detection, AML monitoring, customer service triage, document processing</div>
+          <div class="ai-card-item">RBC created standalone <strong>AI Group</strong> (Q1 2026) — structural separation of AI from T&amp;O signals maturity shift</div>
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-title">Structural &amp; Workforce Impact</div>
+        <div class="ai-card-items">
+          <div class="ai-card-item">Manulife: new CTOO + Chief AI Officer dual structure (Jul 2026) — AI elevated to C-suite independent function</div>
+          <div class="ai-card-item">Citi research: <strong>54% of finance jobs</strong> face AI-led displacement risk by 2029 — highest of any major industry</div>
+          <div class="ai-card-item">Gartner: by 2030, <strong>0% of IT work</strong> done without AI augmentation; 25% done by AI alone</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-note">Research: May 2026 &nbsp;|&nbsp; Sources: RBC/TD/CIBC/BMO/NBC Investor Days &amp; Earnings, OSFI E-21/B-10, Capgemini Top Trends 2026, Massey Henry, PwC, Citi, Gartner, IBM Canada, Payments Canada</div>
+    <div class="footer-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#dbeafe;border:1px solid #1d4ed8"></div>Committed target</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#fee2e2;border:1px solid #b91c1c"></div>Hard deadline</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f3f4f6;border:1px solid #9ca3af"></div>Direction / ambition</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
