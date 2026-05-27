@@ -93,12 +93,12 @@
     display: flex;
     align-items: center;
     gap: 0;
-    height: 24px;
+    height: 44px;
   }
   .bar-label-spacer { width: 130px; flex-shrink: 0; }
   .bar-track {
     flex: 1;
-    height: 24px;
+    height: 44px;
     background: #f3f5f8;
     border-radius: 3px;
     position: relative;
@@ -125,7 +125,8 @@
   /* Range bar */
   .range-bar {
     position: absolute;
-    top: 6px; height: 12px;
+    top: 50%; transform: translateY(-50%);
+    height: 12px;
     border-radius: 6px;
     opacity: 0.25;
   }
@@ -259,7 +260,7 @@
       <div class="header-title">Cost-to-Income Ratio — Global Comparison &amp; Key Drivers</div>
     </div>
     <div class="header-meta">
-      Lower = more efficient &nbsp;|&nbsp; Sources: Investor reports, ECB, S&amp;P, McKinsey, Erste Group, Revolut Annual Report 2024<br>
+      Lower = more efficient &nbsp;|&nbsp; Sources: Investor reports, ECB, S&amp;P, McKinsey, Revolut Annual Report 2024<br>
       ⚠ Definitions vary across peer groups — see footer notes
     </div>
   </div>
@@ -316,7 +317,7 @@
         </div>
       </div>
 
-      <div style="height:18px"></div>
+      <div style="height:32px"></div>
 
       <!-- NORDIC -->
       <div class="group">
@@ -342,74 +343,18 @@
         </div>
       </div>
 
-      <div style="height:18px"></div>
-
-      <!-- ERSTE CEE -->
-      <div class="group">
-        <div class="group-label-row">
-          <div class="group-badge badge-cee">Erste Group — CEE Entities</div>
-          <div class="group-note">Country-level segment data, FY2024 actuals</div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-label-spacer"></div>
-          <div class="bar-track">
-            <div class="range-bar c-cee" style="left:14.75%;width:79%"></div>
-            <!-- Hungary 35.9% -->
-            <div class="dot c-cee" style="left:14.75%" title="Hungary 35.9%">
-              <div class="dot-label" style="left:0">Hungary</div>
-              <div class="dot-val" style="left:0">35.9%</div>
-            </div>
-            <!-- Romania 40.9% -->
-            <div class="dot c-cee" style="left:27.25%" title="Romania 40.9%">
-              <div class="dot-label" style="left:0">Romania</div>
-              <div class="dot-val" style="left:0">40.9%</div>
-            </div>
-            <!-- Slovakia 43.4% -->
-            <div class="dot c-cee" style="left:33.5%" title="Slovakia 43.4%">
-              <div class="dot-label" style="left:0">Slovakia</div>
-              <div class="dot-val" style="left:0">43.4%</div>
-            </div>
-            <!-- Austria EBO 44.6% -->
-            <div class="dot c-cee" style="left:36.5%" title="Austria EBO 44.6%">
-              <div class="dot-label" style="left:0">Austria EBO</div>
-              <div class="dot-val" style="left:0">44.6%</div>
-            </div>
-            <!-- Czech Republic 45.5% -->
-            <div class="dot c-cee" style="left:38.75%" title="Czech Republic 45.5%">
-              <div class="dot-label" style="left:0">Czechia</div>
-              <div class="dot-val" style="left:0">45.5%</div>
-            </div>
-            <!-- Croatia 48.3% -->
-            <div class="dot c-cee" style="left:45.75%" title="Croatia 48.3%">
-              <div class="dot-label" style="left:0">Croatia</div>
-              <div class="dot-val" style="left:0">48.3%</div>
-            </div>
-            <!-- Serbia 61.6% -->
-            <div class="dot c-cee" style="left:79%" title="Serbia 61.6%">
-              <div class="dot-label" style="left:0">Serbia</div>
-              <div class="dot-val" style="left:0">61.6%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="height:18px"></div>
+      <div style="height:32px"></div>
 
       <!-- CANADA -->
       <div class="group">
         <div class="group-label-row">
           <div class="group-badge badge-canada">Canadian Big 6</div>
-          <div class="group-note">Adjusted ratios, Q1 FY2026 actuals; RBC = Investor Day 2027 target (◆)</div>
+          <div class="group-note">Adjusted ratios, Q1 FY2026 actuals</div>
         </div>
         <div class="bar-row">
           <div class="bar-label-spacer"></div>
           <div class="bar-track">
-            <div class="range-bar c-canada" style="left:25%;width:75%"></div>
-            <!-- RBC target <40% by 2027 -->
-            <div class="target-arrow" style="left:25%" title="RBC target sub-40% by 2027">◆
-              <div class="dot-label" style="left:0;top:-14px">RBC target</div>
-              <div class="dot-val" style="left:0;bottom:-13px">&lt;40% '27</div>
-            </div>
+            <div class="range-bar c-canada" style="left:54%;width:39%"></div>
             <!-- CIBC 51.6% -->
             <div class="dot c-canada" style="left:54%" title="CIBC 51.6%">
               <div class="dot-label" style="left:0">CIBC</div>
@@ -429,7 +374,7 @@
         </div>
       </div>
 
-      <div style="height:18px"></div>
+      <div style="height:32px"></div>
 
       <!-- EU UNIVERSAL -->
       <div class="group">
@@ -460,7 +405,7 @@
         </div>
       </div>
 
-      <div style="height:18px"></div>
+      <div style="height:32px"></div>
 
       <!-- US -->
       <div class="group">
@@ -495,7 +440,7 @@
       <div class="driver-card">
         <div class="driver-title">Revenue growth outpaces cost growth</div>
         <div class="driver-desc">McKinsey: 68% of CIR outperformance is a revenue story, not cost-cutting. Market leadership, fee income diversification, and pricing power expand the denominator faster than the numerator grows.</div>
-        <div class="driver-example">Erste Hungary &amp; Romania: high loan/fee growth in converging CEE economies</div>
+        <div class="driver-example">Nordic banks, CIBC: fee income diversification and market leadership sustain wide revenue base</div>
       </div>
 
       <div class="driver-card">
@@ -506,8 +451,8 @@
 
       <div class="driver-card">
         <div class="driver-title">Concentrated markets + oligopoly pricing</div>
-        <div class="driver-desc">Nordic and CEE banking markets are dominated by 2–4 players. High market share reduces cost of customer acquisition and supports margin — the efficiency ratio benefits from both sides simultaneously.</div>
-        <div class="driver-example">Handelsbanken, DNB, Erste Slovakia/Romania</div>
+        <div class="driver-desc">Nordic banking markets are dominated by 2–4 players. High market share reduces cost of customer acquisition and supports margin — the efficiency ratio benefits from both sides simultaneously.</div>
+        <div class="driver-example">Handelsbanken, DNB, Nordea: ~42% sector avg vs. 50%+ in fragmented EU markets</div>
       </div>
 
       <div class="driver-card">
@@ -518,8 +463,8 @@
 
       <div class="driver-card">
         <div class="driver-title">Low-cost personnel base (structural)</div>
-        <div class="driver-desc">Erste's CEE entities have structurally lower salary costs vs. Vienna or Toronto. The efficiency advantage is partly structural geography, not replicable management practice — important caveat for benchmarking.</div>
-        <div class="driver-example">Erste Hungary 35.9%: ~30% lower wage costs vs. Western Europe</div>
+        <div class="driver-desc">Some efficiency leaders benefit from structurally lower salary costs. This advantage is geographic and not replicable through management practice alone — an important caveat when benchmarking against emerging market or CEE-focused peers.</div>
+        <div class="driver-example">Nordic banks benefit from lean governance models; neobanks from remote-first, global talent pools</div>
       </div>
 
       <div class="insight-box">
@@ -533,18 +478,17 @@
 
   <div class="footer">
     <div class="footer-note">
-      Sources: ECB Q4 2025 supervisory data · S&amp;P Global Nordic Banking 9M 2024 · Erste Group 2024 Preliminary Results · Revolut 2024 Annual Report · KBW Nasdaq Bank Index 2025 · McKinsey Global Banking Review 2024 · ML Advisory Nordic Q3 2025
+      Sources: ECB Q4 2025 supervisory data · S&amp;P Global Nordic Banking 9M 2024 · Revolut 2024 Annual Report · KBW Nasdaq Bank Index 2025 · McKinsey Global Banking Review 2024 · ML Advisory Nordic Q3 2025
     </div>
     <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
       <div class="legend">
         <div class="leg"><div class="leg-dot c-fintech"></div>Neobanks</div>
         <div class="leg"><div class="leg-dot c-nordic"></div>Nordic</div>
-        <div class="leg"><div class="leg-dot c-cee"></div>Erste CEE</div>
         <div class="leg"><div class="leg-dot c-canada"></div>Canada Big 6</div>
         <div class="leg"><div class="leg-dot c-eu"></div>EU Universal</div>
         <div class="leg"><div class="leg-dot c-us"></div>US Banks</div>
       </div>
-      <div class="leg-note">◆ = committed future target &nbsp;|&nbsp; Neobank ratios: admin cost / gross revenue — not directly comparable to bank CIR &nbsp;|&nbsp; All values adjusted where stated</div>
+      <div class="leg-note">Neobank ratios: admin cost / gross revenue — not directly comparable to bank CIR &nbsp;|&nbsp; All values adjusted where stated</div>
     </div>
   </div>
 
