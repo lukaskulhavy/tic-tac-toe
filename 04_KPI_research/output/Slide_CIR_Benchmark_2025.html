@@ -287,7 +287,7 @@
 
       <!-- Helper: track width = 100% covers 30%–70% = 40pp range. Left% = (val - 30) / 40 * 100 -->
 
-      <!-- FINTECHS -->
+      <!-- FINTECHS — well spaced, no overlap -->
       <div class="group">
         <div class="group-label-row">
           <div class="group-badge badge-fintech">Neobanks / Fintechs</div>
@@ -296,22 +296,21 @@
         <div class="bar-row">
           <div class="bar-label-spacer"></div>
           <div class="bar-track">
-            <!-- Range: ~40-65% (wide — scaling stage) -->
             <div class="range-bar c-fintech" style="left:25%;width:62.5%"></div>
             <!-- Revolut ~45% -->
             <div class="dot c-fintech" style="left:37.5%" title="Revolut ~45%">
-              <div class="dot-label" style="left:0">Revolut</div>
-              <div class="dot-val" style="left:0">~45%</div>
+              <div class="dot-label" style="left:50%">Revolut</div>
+              <div class="dot-val" style="left:50%">~45%</div>
             </div>
-            <!-- Starling ~55% est -->
+            <!-- Starling ~55% -->
             <div class="dot c-fintech" style="left:62.5%" title="Starling ~55%">
-              <div class="dot-label" style="left:0">Starling</div>
-              <div class="dot-val" style="left:0">~55%</div>
+              <div class="dot-label" style="left:50%">Starling</div>
+              <div class="dot-val" style="left:50%">~55%</div>
             </div>
-            <!-- Monzo ~65% est -->
+            <!-- Monzo ~65% -->
             <div class="dot c-fintech" style="left:87.5%" title="Monzo ~65%">
-              <div class="dot-label" style="left:0">Monzo</div>
-              <div class="dot-val" style="left:0">~65%</div>
+              <div class="dot-label" style="left:50%">Monzo</div>
+              <div class="dot-val" style="left:50%">~65%</div>
             </div>
           </div>
         </div>
@@ -319,7 +318,7 @@
 
       <div style="height:32px"></div>
 
-      <!-- NORDIC -->
+      <!-- NORDIC — Sector avg and Nordea/Danske are 2pp apart: stagger vertically -->
       <div class="group">
         <div class="group-label-row">
           <div class="group-badge badge-nordic">Nordic Banks</div>
@@ -329,15 +328,15 @@
           <div class="bar-label-spacer"></div>
           <div class="bar-track">
             <div class="range-bar c-nordic" style="left:25%;width:42.5%"></div>
-            <!-- Nordic average ~42% -->
+            <!-- Sector avg ~42% — label normal height, value normal -->
             <div class="dot c-nordic" style="left:30%" title="Nordic avg ~42%">
-              <div class="dot-label" style="left:0">Sector avg</div>
-              <div class="dot-val" style="left:0">~42%</div>
+              <div class="dot-label" style="left:50%;top:-14px">Sector avg</div>
+              <div class="dot-val" style="left:50%;bottom:-13px">~42%</div>
             </div>
-            <!-- Nordea / Danske ~44% -->
+            <!-- Nordea/Danske ~44% — label pushed high, value pushed low -->
             <div class="dot c-nordic" style="left:35%" title="Nordea/Danske ~44%">
-              <div class="dot-label" style="left:0">Nordea/Danske</div>
-              <div class="dot-val" style="left:0">~44%</div>
+              <div class="dot-label" style="left:50%;top:-30px">Nordea/Danske</div>
+              <div class="dot-val" style="left:50%;bottom:-28px">~44%</div>
             </div>
           </div>
         </div>
@@ -345,7 +344,7 @@
 
       <div style="height:32px"></div>
 
-      <!-- CANADA -->
+      <!-- CANADA — TD (57.1%) and BMO (57.8%) only 0.7pp apart: stagger height + nudge labels left/right -->
       <div class="group">
         <div class="group-label-row">
           <div class="group-badge badge-canada">Canadian Big 6</div>
@@ -355,20 +354,20 @@
           <div class="bar-label-spacer"></div>
           <div class="bar-track">
             <div class="range-bar c-canada" style="left:54%;width:39%"></div>
-            <!-- CIBC 51.6% -->
+            <!-- CIBC 51.6% — normal -->
             <div class="dot c-canada" style="left:54%" title="CIBC 51.6%">
-              <div class="dot-label" style="left:0">CIBC</div>
-              <div class="dot-val" style="left:0">51.6%</div>
+              <div class="dot-label" style="left:50%;top:-14px">CIBC</div>
+              <div class="dot-val" style="left:50%;bottom:-13px">51.6%</div>
             </div>
-            <!-- TD 57.1% -->
+            <!-- TD 57.1% — label anchored left of dot, normal height -->
             <div class="dot c-canada" style="left:67.75%" title="TD 57.1%">
-              <div class="dot-label" style="left:0">TD</div>
-              <div class="dot-val" style="left:0">57.1%</div>
+              <div class="dot-label" style="left:-10px;top:-14px;transform:translateX(-100%)">TD</div>
+              <div class="dot-val" style="left:-10px;bottom:-13px;transform:translateX(-100%)">57.1%</div>
             </div>
-            <!-- BMO 57.8% -->
+            <!-- BMO 57.8% — label anchored right of dot, pushed high -->
             <div class="dot c-canada" style="left:69.5%" title="BMO 57.8%">
-              <div class="dot-label" style="left:0">BMO</div>
-              <div class="dot-val" style="left:0">57.8%</div>
+              <div class="dot-label" style="left:20px;top:-30px;transform:none">BMO</div>
+              <div class="dot-val" style="left:20px;bottom:-28px;transform:none">57.8%</div>
             </div>
           </div>
         </div>
@@ -376,7 +375,7 @@
 
       <div style="height:32px"></div>
 
-      <!-- EU UNIVERSAL -->
+      <!-- EU UNIVERSAL — BNP (67.5%) and DB/Barclays (75%) are 7.5pp apart; stagger to be safe -->
       <div class="group">
         <div class="group-label-row">
           <div class="group-badge badge-eu">EU Large Universal Banks</div>
@@ -386,20 +385,20 @@
           <div class="bar-label-spacer"></div>
           <div class="bar-track">
             <div class="range-bar c-eu" style="left:37.5%;width:62.5%"></div>
-            <!-- EU sector avg 50% -->
+            <!-- EU avg ~50% — normal -->
             <div class="dot c-eu" style="left:50%" title="EU sector avg ~50%">
-              <div class="dot-label" style="left:0">EU avg</div>
-              <div class="dot-val" style="left:0">~50%</div>
+              <div class="dot-label" style="left:50%;top:-14px">EU avg</div>
+              <div class="dot-val" style="left:50%;bottom:-13px">~50%</div>
             </div>
-            <!-- BNP ~57% -->
+            <!-- BNP ~57% — normal -->
             <div class="dot c-eu" style="left:67.5%" title="BNP ~57%">
-              <div class="dot-label" style="left:0">BNP</div>
-              <div class="dot-val" style="left:0">~57%</div>
+              <div class="dot-label" style="left:50%;top:-14px">BNP</div>
+              <div class="dot-val" style="left:50%;bottom:-13px">~57%</div>
             </div>
-            <!-- Deutsche/Barclays ~60% -->
+            <!-- DB/Barclays ~60% — pushed high (long label, close to BNP) -->
             <div class="dot c-eu" style="left:75%" title="Deutsche/Barclays ~60%">
-              <div class="dot-label" style="left:0">DB/Barclays</div>
-              <div class="dot-val" style="left:0">~60%</div>
+              <div class="dot-label" style="left:50%;top:-30px">DB/Barclays</div>
+              <div class="dot-val" style="left:50%;bottom:-28px">~60%</div>
             </div>
           </div>
         </div>
@@ -407,7 +406,7 @@
 
       <div style="height:32px"></div>
 
-      <!-- US -->
+      <!-- US — KBW avg (71.75%) and Regionals (75%) are 3.25pp apart: stagger -->
       <div class="group">
         <div class="group-label-row">
           <div class="group-badge badge-us">US Banks</div>
@@ -417,15 +416,15 @@
           <div class="bar-label-spacer"></div>
           <div class="bar-track">
             <div class="range-bar c-us" style="left:50%;width:50%"></div>
-            <!-- KBW avg 58.7% -->
+            <!-- KBW avg 58.7% — normal -->
             <div class="dot c-us" style="left:71.75%" title="KBW avg 58.7%">
-              <div class="dot-label" style="left:0">KBW avg</div>
-              <div class="dot-val" style="left:0">58.7%</div>
+              <div class="dot-label" style="left:50%;top:-14px">KBW avg</div>
+              <div class="dot-val" style="left:50%;bottom:-13px">58.7%</div>
             </div>
-            <!-- Regionals ~60% -->
+            <!-- Regionals ~60% — pushed high -->
             <div class="dot c-us" style="left:75%" title="Regionals ~60%">
-              <div class="dot-label" style="left:0">Regionals</div>
-              <div class="dot-val" style="left:0">~60%</div>
+              <div class="dot-label" style="left:50%;top:-30px">Regionals</div>
+              <div class="dot-val" style="left:50%;bottom:-28px">~60%</div>
             </div>
           </div>
         </div>
