@@ -8,31 +8,46 @@
 
 Canada's financial services sector is one of the most concentrated and stable in the world. Six banks, four life insurers, and a handful of large credit unions and asset managers dominate the market. The federal regulator OSFI supervises all federally incorporated institutions; provincial regulators cover credit unions, securities dealers, and insurance brokers.
 
-> **Note on the COO role in Canadian FSI:** Not all Canadian financial institutions have a formal enterprise-level Chief Operating Officer. Several distribute operational leadership across Group Heads or EVPs. Where a dedicated COO does not exist, the closest operational equivalent is noted.
-
-### Big 6 Banks
+### Big 6 Banks — Organization Overview
 
 The Big 6 collectively hold ~90% of all Canadian banking assets. All are publicly traded on the TSX and NYSE.
 
-| Bank | Approx. Total Assets (FY2025) | Current COO / Operational Lead | In Role Since | Notable 2026 Context |
-|---|---|---|---|---|
-| **Royal Bank of Canada (RBC)** | ~$2.2T CAD | **Naim Kazmi**, Group Head, Technology & Operations *(no formal enterprise COO; Bruce Ross moved to lead standalone AI Group in Q1 2026)* | Q1 2026 | Largest Canadian bank by assets; completed HSBC Canada acquisition 2024; created standalone AI Group in early 2026 |
-| **Toronto-Dominion Bank (TD)** | ~$2.1T CAD | **Taylan Turan**, Senior EVP & Chief Operating Officer | Sep 29, 2025 | Joined from HSBC (Global CEO Retail Banking); leading $2–2.5B cost reduction program under CEO Raymond Chun |
-| **Bank of Nova Scotia (Scotiabank)** | ~$1.4T CAD | **Phil Thomas**, Group Head & Chief Strategy and Operating Officer | Dec 2, 2025 | Combines strategy and operations; 20+ years at Scotiabank across Risk, Canadian Banking, and International Banking |
-| **Bank of Montreal (BMO)** | ~$1.4T CAD | *(No formal enterprise COO identified)* | — | Operational leadership sits with CEO Darryl White and key EVPs; Aman Malik appointed COO of BMO Capital Markets (Jan 2026) |
-| **Canadian Imperial Bank of Commerce (CIBC)** | ~$1.0T CAD | *(COO role vacant at enterprise level since Nov 2025)* | — | Harry Culham served as COO Apr 1–Oct 31, 2025, then became President & CEO. No named successor to the COO role as of May 2026 |
-| **National Bank of Canada (NBC)** | ~$450B CAD | *(No formal enterprise COO)* | — | Julie Lévesque held EVP IT & Operations until end of 2025, moved to EVP Personal Banking Jan 2026; operational leadership redistributed |
+| Bank | Approx. Total Assets (FY2025) | Primary Focus | Notable 2026 Context |
+|---|---|---|---|
+| **Royal Bank of Canada (RBC)** | ~$2.2T CAD | Retail, wealth, capital markets, US operations (City National) | Largest Canadian bank by assets; completed HSBC Canada acquisition 2024; created standalone AI Group in early 2026 |
+| **Toronto-Dominion Bank (TD)** | ~$2.1T CAD | Retail banking Canada & US, wealth, insurance | US AML/BSA consent order (2024) reshaping US retail strategy; major restructuring underway with $2–2.5B cost reduction program |
+| **Bank of Nova Scotia (Scotiabank)** | ~$1.4T CAD | Retail, commercial, international (Latin America) | Refocusing on Canada, US, Mexico; divesting non-core international operations under CEO Scott Thomson |
+| **Bank of Montreal (BMO)** | ~$1.4T CAD | Retail, commercial, capital markets, North America | Post Bank of the West integration (2023); efficiency improvement a top 2026 priority |
+| **Canadian Imperial Bank of Commerce (CIBC)** | ~$1.0T CAD | Retail, wealth, capital markets | Delivered record Q1 2026 revenue across all segments; strongest efficiency ratio among Big 6 at 51.6% |
+| **National Bank of Canada (NBC)** | ~$450B CAD | Retail, commercial, wealth (Quebec-focused) | Completed acquisition of Canadian Western Bank (2024); expanding Western Canada presence |
 
-### Big 4 Life Insurers
+### Big 6 Banks — COO & Operational Leadership
 
-Canada's life insurers are significant FSI employers and technology investors, with global operations far exceeding their domestic footprint. Enterprise-level COO titles are less common in the insurer segment; operational leadership is typically held by divisional Presidents or EVPs.
+> Not all Canadian banks have a formal enterprise-level COO. Where the title does not exist, the closest operational equivalent is listed.
 
-| Insurer | Scale | Current COO / Operational Lead | In Role Since | Notable 2026 Context |
-|---|---|---|---|---|
-| **Manulife Financial** | ~$849B total assets | *(No named enterprise COO publicly identified as of May 2026)* | — | Largest Canadian insurer; major Asia Pacific growth engine; active AI/digital transformation |
-| **Great-West Lifeco** | ~$701B total assets; $3T+ client AUM | *(No named enterprise COO publicly identified as of May 2026)* | — | Empower is the #2 US retirement plan provider; operational scale drives significant COO complexity |
-| **Sun Life Financial** | ~$331B total assets; $1.6T AUM | *(No named enterprise COO publicly identified as of May 2026)* | — | Strong wealth/AM pivot; US health insurance expansion; $1.6T AUM across MFS and SLC Management |
-| **iA Financial Group** | ~$100B+ total assets | *(No named enterprise COO publicly identified as of May 2026)* | — | Fastest-growing of the Big 4; acquisitive strategy in Canada and US |
+| Institution | Who | Title | In Role Since |
+|---|---|---|---|
+| **TD** | Taylan Turan | Senior EVP & Chief Operating Officer | Sep 2025 (from HSBC, Global CEO Retail Banking) |
+| **Scotiabank** | Phil Thomas | Group Head & Chief Strategy and Operating Officer | Dec 2025 (20+ yrs at Scotiabank across Risk, Canadian Banking, International) |
+| **RBC** | Naim Kazmi | Group Head, Technology & Operations | Q1 2026 (Bruce Ross moved to lead the new AI Group) |
+| **CIBC** | *(vacant)* | COO role not refilled after Harry Culham became CEO Nov 2025 | — |
+| **BMO** | *(no enterprise COO)* | Operational leadership distributed across CEO Darryl White and EVPs | — |
+| **NBC** | *(no enterprise COO)* | Julie Lévesque (EVP IT & Operations) moved to EVP Personal Banking Jan 2026; role redistributed | — |
+
+### Big 4 Life Insurers — Organization Overview
+
+Canada's life insurers are significant FSI employers and technology investors, with global operations far exceeding their domestic footprint.
+
+| Insurer | Scale | Primary Focus | Notable 2026 Context |
+|---|---|---|---|
+| **Manulife Financial** | ~$849B total assets | Life, health, wealth management (Asia-heavy) | Largest Canadian insurer; major Asia Pacific growth engine; active AI/digital transformation |
+| **Great-West Lifeco** | ~$701B total assets; $3T+ client AUM | Life, health, US retirement (Empower), reinsurance | Empower is the #2 US retirement plan provider; operational scale drives significant COO complexity |
+| **Sun Life Financial** | ~$331B total assets; $1.6T AUM | Life, health, asset management (MFS, SLC) | Strong wealth/AM pivot; US health insurance expansion; $1.6T AUM across MFS and SLC Management |
+| **iA Financial Group** | ~$100B+ total assets | Life, wealth, auto/consumer finance | Fastest-growing of the Big 4; acquisitive strategy in Canada and US |
+
+### Big 4 Life Insurers — COO & Operational Leadership
+
+> Enterprise-level COO titles are less common in the Canadian insurer segment. Operational leadership is typically held by divisional Presidents or EVPs. No named enterprise COO was publicly identifiable for any of the Big 4 as of May 2026.
 
 ### Other Significant Players
 
