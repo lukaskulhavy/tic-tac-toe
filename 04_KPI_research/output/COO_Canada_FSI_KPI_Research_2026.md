@@ -34,6 +34,32 @@ The Big 6 collectively hold ~90% of all Canadian banking assets. All are publicl
 | **BMO** | *(no enterprise COO)* | Operational leadership distributed across CEO Darryl White and EVPs | — |
 | **NBC** | *(no enterprise COO)* | Julie Lévesque (EVP IT & Operations) moved to EVP Personal Banking Jan 2026; role redistributed | — |
 
+#### Where to Look: COO Competencies at Banks Without a Formal COO
+
+**CIBC** — COO role absorbed into expanded mandates after Harry Culham became CEO:
+
+| Competency Area | Who to Engage | Title |
+|---|---|---|
+| Technology, AI & operational modernization | Richard Jardim | Senior EVP & Chief Technology and Information Officer, Global Technology, Data and AI |
+| Administrative operations & efficiency | Christina Kramer | Senior EVP & Chief Administrative Officer *(expanded scope as of Nov 2025)* |
+| People, culture & change management | Yvonne Dimitroff | EVP & Chief Human Resources Officer |
+
+**BMO** — Operational leadership structured around a CTOO and divisional heads:
+
+| Competency Area | Who to Engage | Title |
+|---|---|---|
+| Technology, operations & service delivery | Steve Tennyson | Chief Technology & Operations Officer |
+| Digital transformation & AI | Mat Mehrotra | Group Head, Canadian Personal & Business Banking *(former Chief Digital Officer)* |
+| Overall operational strategy | Darryl White | President & CEO |
+
+**National Bank (NBC)** — Technology governance decentralised across business lines as of Jan 2026:
+
+| Competency Area | Who to Engage | Title |
+|---|---|---|
+| Enterprise technology governance, cybersecurity & infrastructure *(CTO reports here)* | Dominic Paradis | EVP, General Counsel, Enterprise Technology and Resilience |
+| T&O strategy for Personal & Commercial Banking | Julie Lévesque | EVP, Personal Banking *(retains T&O oversight for this segment)* |
+| T&O strategy for Capital Markets & Wealth Management | Étienne Dubuc | EVP, Capital Markets |
+
 ### Big 4 Life Insurers — Organization Overview
 
 Canada's life insurers are significant FSI employers and technology investors, with global operations far exceeding their domestic footprint.
@@ -47,7 +73,29 @@ Canada's life insurers are significant FSI employers and technology investors, w
 
 ### Big 4 Life Insurers — COO & Operational Leadership
 
-> Enterprise-level COO titles are less common in the Canadian insurer segment. Operational leadership is typically held by divisional Presidents or EVPs. No named enterprise COO was publicly identifiable for any of the Big 4 as of May 2026.
+> Enterprise-level COO titles are less common in the Canadian insurer segment. Operational leadership is typically held by divisional Presidents or EVPs.
+
+| Institution | Who | Title | In Role Since |
+|---|---|---|---|
+| **Manulife** | Shamus Weiland | Chief Technology & Operations Officer | Jul 1, 2026 (expanded remit; predecessor Rahul Joshi retiring) |
+| **Great-West Lifeco** | *(no named enterprise COO)* | — | — |
+| **Sun Life** | *(no named enterprise COO)* | — | — |
+| **iA Financial** | *(no named enterprise COO)* | — | — |
+
+#### Where to Look: COO Competencies at Insurers Without a Formal COO
+
+**Manulife** — moving to a consolidated CTOO model (effective Jul 2026), with a dedicated Chief AI Officer:
+
+| Competency Area | Who to Engage | Title |
+|---|---|---|
+| Technology, operations & service delivery | Shamus Weiland | Chief Technology & Operations Officer *(effective Jul 1, 2026)* |
+| AI strategy & enterprise data | Jodie Wallis | Chief AI Officer *(reports directly to CEO Phil Witherington)* |
+
+**Great-West Lifeco, Sun Life, iA Financial** — no public enterprise-level operational lead identified. For these institutions, operational competencies are best accessed through:
+- Divisional Presidents (Canada, US, Asia segments)
+- Chief Information / Technology Officers (where publicly named)
+- Chief Transformation or Chief Digital Officers if present
+- Annual reports and investor day materials, which name EVP-level owners for specific transformation programs
 
 ### Other Significant Players
 
