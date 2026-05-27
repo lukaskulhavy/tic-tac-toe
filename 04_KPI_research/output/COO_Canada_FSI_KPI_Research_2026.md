@@ -4,6 +4,42 @@
 
 ---
 
+## Section 0 — Canadian FSI Market Overview
+
+Canada's financial services sector is one of the most concentrated and stable in the world. Six banks, four life insurers, and a handful of large credit unions and asset managers dominate the market. The federal regulator OSFI supervises all federally incorporated institutions; provincial regulators cover credit unions, securities dealers, and insurance brokers.
+
+### Big 6 Banks
+
+The Big 6 collectively hold ~90% of all Canadian banking assets. All are publicly traded on the TSX and NYSE.
+
+| Bank | Approx. Total Assets (FY2025) | Primary Focus | Notable 2026 Context |
+|---|---|---|---|
+| **Royal Bank of Canada (RBC)** | ~$2.2T CAD | Retail, wealth, capital markets, US operations (City National) | Largest Canadian bank by assets; completed HSBC Canada acquisition 2024; created standalone AI Group in early 2026 |
+| **Toronto-Dominion Bank (TD)** | ~$2.1T CAD | Retail banking Canada & US, wealth, insurance | US AML/BSA consent order (2024) reshaping US retail strategy; major restructuring underway with $2–2.5B cost reduction program |
+| **Bank of Nova Scotia (Scotiabank)** | ~$1.4T CAD | Retail, commercial, international (Latin America) | Refocusing on Canada, US, Mexico; divesting non-core international operations under CEO Scott Thomson |
+| **Bank of Montreal (BMO)** | ~$1.4T CAD | Retail, commercial, capital markets, North America | Post Bank of the West integration (2023); efficiency improvement a top 2026 priority |
+| **Canadian Imperial Bank of Commerce (CIBC)** | ~$1.0T CAD | Retail, wealth, capital markets | Delivered record Q1 2026 revenue across all segments; strongest efficiency ratio among Big 6 at 51.6% |
+| **National Bank of Canada (NBC)** | ~$450B CAD | Retail, commercial, wealth (Quebec-focused) | Completed acquisition of Canadian Western Bank (2024); expanding Western Canada presence |
+
+### Big 4 Life Insurers
+
+Canada's life insurers are significant FSI employers and technology investors, with global operations far exceeding their domestic footprint.
+
+| Insurer | Scale | Primary Focus | Notable 2026 Context |
+|---|---|---|---|
+| **Manulife Financial** | ~$849B total assets | Life, health, wealth management (Asia-heavy) | Largest Canadian insurer; major Asia Pacific growth engine; active AI/digital transformation |
+| **Great-West Lifeco** | ~$701B total assets; $3T+ client AUM | Life, health, US retirement (Empower), reinsurance | Empower is the #2 US retirement plan provider; operational scale drives significant COO complexity |
+| **Sun Life Financial** | ~$331B total assets; $1.6T AUM | Life, health, asset management (MFS, SLC) | Strong wealth/AM pivot; US health insurance expansion; $1.6T AUM across MFS and SLC Management |
+| **iA Financial Group** | ~$100B+ total assets | Life, wealth, auto/consumer finance | Fastest-growing of the Big 4; acquisitive strategy in Canada and US |
+
+### Other Significant Players
+
+- **Credit unions & caisses populaires** — provincially regulated; Desjardins (QC) is the largest with ~$430B in assets, comparable to NBC in scale. BC's Vancity and Coast Capital are notable in Western Canada.
+- **Payments Canada** — operator of Canada's core payment systems (LVTS, ACSS, and the incoming Real-Time Rail). COOs across the sector are directly impacted by its infrastructure roadmap.
+- **Regulators shaping COO agendas in 2026:** OSFI (prudential), Bank of Canada (monetary policy + consumer-driven banking framework), FINTRAC (AML/CFT), FCAC (consumer protection — transitioning oversight to Bank of Canada under new open banking framework).
+
+---
+
 ## How to Read This Report
 
 Two types of content are distinguished throughout:
