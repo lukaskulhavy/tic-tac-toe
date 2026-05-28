@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cost-to-Income Ratio — Global Benchmark 2025</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+  html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
     background: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
   }
 
+  /* Slide is absolutely centred; JS applies scale() on top of translate */
   .slide {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
     width: 1280px;
-    min-width: 1280px;
     background: #fff;
     border-radius: 6px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.12);
@@ -52,7 +54,7 @@
     flex-direction: column;
   }
 
-  /* Axis tick row — no left offset, spans full track width */
+  /* Axis tick row */
   .chart-header-row {
     display: flex;
     align-items: flex-end;
@@ -146,7 +148,6 @@
    * Label above dot — bottom-anchored so every label's lower edge sits at
    * the same distance from the dot, regardless of how many lines it wraps to.
    * All names in a group are therefore vertically aligned (bottom-aligned).
-   * left/transform provide horizontal centering on the dot.
    */
   .dot-label {
     position: absolute;
@@ -266,7 +267,7 @@
     <!-- CHART PANEL -->
     <div class="chart-panel">
 
-      <!-- Axis — spans full track width, no left spacer -->
+      <!-- Axis — spans full track width -->
       <div class="chart-header-row">
         <div class="axis-ticks">
           <div class="tick">30%</div>
@@ -283,81 +284,41 @@
 
       <!-- Track position formula: left% = (CIR_value − 30) / 40 × 100 -->
 
-      <!-- ① NEOBANKS / FINTECHS -->
-      <div class="group">
-        <div class="group-title-row">
-          <div class="group-badge badge-fintech">Neobanks / Fintechs</div>
-        </div>
-        <div class="group-desc-row">Revolut: admin cost / gross revenue (different definition); Starling &amp; Monzo: estimated from published P&amp;L</div>
-        <div class="bar-row">
-          <div class="bar-track">
-            <div class="range-bar c-fintech" style="left:25%;width:62.5%"></div>
-            <!-- Revolut ~45% → (45-30)/40 = 37.5% -->
-            <div class="dot c-fintech" style="left:37.5%">
-              <div class="dot-label">Revolut</div>
-              <div class="dot-val">~45%</div>
-            </div>
-            <!-- Starling ~55% → 62.5% -->
-            <div class="dot c-fintech" style="left:62.5%">
-              <div class="dot-label">Starling</div>
-              <div class="dot-val">~55%</div>
-            </div>
-            <!-- Monzo ~65% → 87.5% -->
-            <div class="dot c-fintech" style="left:87.5%">
-              <div class="dot-label">Monzo</div>
-              <div class="dot-val">~65%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="height:12px"></div>
-
-      <!-- ② NORDIC BANKS -->
-      <div class="group">
-        <div class="group-title-row">
-          <div class="group-badge badge-nordic">Nordic Banks</div>
-        </div>
-        <div class="group-desc-row">Top-tier sector avg ~42% (S&amp;P Global, 9M 2024); individual institutions range 40–47%</div>
-        <div class="bar-row">
-          <div class="bar-track">
-            <div class="range-bar c-nordic" style="left:25%;width:42.5%"></div>
-            <!-- Sector avg ~42% → 30% -->
-            <div class="dot c-nordic" style="left:30%">
-              <div class="dot-label">Sector<br>avg</div>
-              <div class="dot-val">~42%</div>
-            </div>
-            <!-- Nordea / Danske ~44% → 35% -->
-            <div class="dot c-nordic" style="left:35%">
-              <div class="dot-label">Nordea/<br>Danske</div>
-              <div class="dot-val">~44%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="height:12px"></div>
-
-      <!-- ③ CANADIAN BIG 6 -->
+      <!-- ① CANADIAN BIG 6 -->
       <div class="group">
         <div class="group-title-row">
           <div class="group-badge badge-canada">Canadian Big 6</div>
         </div>
-        <div class="group-desc-row">Adjusted efficiency ratios, Q1 FY2026 actuals; RBC targeting sub-40% by 2027</div>
+        <div class="group-desc-row">Adjusted efficiency ratios, Q1 FY2026 actuals; RBC targeting sub-40% by 2027; NBC &amp; Scotia are approximate</div>
         <div class="bar-row">
           <div class="bar-track">
-            <div class="range-bar c-canada" style="left:55%;width:15%"></div>
-            <!-- CIBC 52% → 55% -->
+            <div class="range-bar c-canada" style="left:30%;width:40%"></div>
+            <!-- RBC 42% → (42-30)/40*100 = 30% -->
+            <div class="dot c-canada" style="left:30%">
+              <div class="dot-label">RBC</div>
+              <div class="dot-val">42%</div>
+            </div>
+            <!-- NBC ~51% → (51-30)/40*100 = 52.5% -->
+            <div class="dot c-canada" style="left:52.5%">
+              <div class="dot-label">NBC</div>
+              <div class="dot-val">~51%</div>
+            </div>
+            <!-- CIBC 52% → (52-30)/40*100 = 55% -->
             <div class="dot c-canada" style="left:55%">
               <div class="dot-label">CIBC</div>
               <div class="dot-val">52%</div>
             </div>
-            <!-- TD 57% → 67.5% -->
+            <!-- Scotia ~55% → (55-30)/40*100 = 62.5% -->
+            <div class="dot c-canada" style="left:62.5%">
+              <div class="dot-label">Scotia</div>
+              <div class="dot-val">~55%</div>
+            </div>
+            <!-- TD 57% → (57-30)/40*100 = 67.5% -->
             <div class="dot c-canada" style="left:67.5%">
               <div class="dot-label">TD</div>
               <div class="dot-val">57%</div>
             </div>
-            <!-- BMO 58% → 70% -->
+            <!-- BMO 58% → (58-30)/40*100 = 70% -->
             <div class="dot c-canada" style="left:70%">
               <div class="dot-label">BMO</div>
               <div class="dot-val">58%</div>
@@ -368,7 +329,32 @@
 
       <div style="height:12px"></div>
 
-      <!-- ④ EU LARGE UNIVERSAL BANKS -->
+      <!-- ② US BANKS -->
+      <div class="group">
+        <div class="group-title-row">
+          <div class="group-badge badge-us">US Banks</div>
+        </div>
+        <div class="group-desc-row">KBW Nasdaq Bank Index avg ~59% (2025); regional banks ~60%; improving ~100 bps/yr</div>
+        <div class="bar-row">
+          <div class="bar-track">
+            <div class="range-bar c-us" style="left:50%;width:50%"></div>
+            <!-- KBW avg ~59% → 72.5% -->
+            <div class="dot c-us" style="left:72.5%">
+              <div class="dot-label">KBW<br>avg</div>
+              <div class="dot-val">~59%</div>
+            </div>
+            <!-- Regionals ~60% → 75% -->
+            <div class="dot c-us" style="left:75%">
+              <div class="dot-label">Regionals</div>
+              <div class="dot-val">~60%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <!-- ③ EU LARGE UNIVERSAL BANKS -->
       <div class="group">
         <div class="group-title-row">
           <div class="group-badge badge-eu">EU Large Universal Banks</div>
@@ -398,24 +384,54 @@
 
       <div style="height:12px"></div>
 
-      <!-- ⑤ US BANKS -->
+      <!-- ④ NEOBANKS / FINTECHS -->
       <div class="group">
         <div class="group-title-row">
-          <div class="group-badge badge-us">US Banks</div>
+          <div class="group-badge badge-fintech">Neobanks / Fintechs</div>
         </div>
-        <div class="group-desc-row">KBW Nasdaq Bank Index avg ~59% (2025); regional banks ~60%; improving ~100 bps/yr</div>
+        <div class="group-desc-row">Revolut: admin cost / gross revenue (different definition); Starling &amp; Monzo: estimated from published P&amp;L</div>
         <div class="bar-row">
           <div class="bar-track">
-            <div class="range-bar c-us" style="left:50%;width:50%"></div>
-            <!-- KBW avg ~59% → 72.5% -->
-            <div class="dot c-us" style="left:72.5%">
-              <div class="dot-label">KBW<br>avg</div>
-              <div class="dot-val">~59%</div>
+            <div class="range-bar c-fintech" style="left:25%;width:62.5%"></div>
+            <!-- Revolut ~45% → (45-30)/40 = 37.5% -->
+            <div class="dot c-fintech" style="left:37.5%">
+              <div class="dot-label">Revolut</div>
+              <div class="dot-val">~45%</div>
             </div>
-            <!-- Regionals ~60% → 75% -->
-            <div class="dot c-us" style="left:75%">
-              <div class="dot-label">Regionals</div>
-              <div class="dot-val">~60%</div>
+            <!-- Starling ~55% → 62.5% -->
+            <div class="dot c-fintech" style="left:62.5%">
+              <div class="dot-label">Starling</div>
+              <div class="dot-val">~55%</div>
+            </div>
+            <!-- Monzo ~65% → 87.5% -->
+            <div class="dot c-fintech" style="left:87.5%">
+              <div class="dot-label">Monzo</div>
+              <div class="dot-val">~65%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <!-- ⑤ NORDIC BANKS -->
+      <div class="group">
+        <div class="group-title-row">
+          <div class="group-badge badge-nordic">Nordic Banks</div>
+        </div>
+        <div class="group-desc-row">Top-tier sector avg ~42% (S&amp;P Global, 9M 2024); individual institutions range 40–47%</div>
+        <div class="bar-row">
+          <div class="bar-track">
+            <div class="range-bar c-nordic" style="left:25%;width:42.5%"></div>
+            <!-- Sector avg ~42% → 30% -->
+            <div class="dot c-nordic" style="left:30%">
+              <div class="dot-label">Sector<br>avg</div>
+              <div class="dot-val">~42%</div>
+            </div>
+            <!-- Nordea / Danske ~44% → 35% -->
+            <div class="dot c-nordic" style="left:35%">
+              <div class="dot-label">Nordea/<br>Danske</div>
+              <div class="dot-val">~44%</div>
             </div>
           </div>
         </div>
@@ -468,20 +484,37 @@
 
   <div class="footer">
     <div class="footer-note">
-      Sources: ECB Q4 2025 supervisory data · S&amp;P Global Nordic Banking 9M 2024 · Revolut 2024 Annual Report · KBW Nasdaq Bank Index 2025 · McKinsey Global Banking Review 2024 · ML Advisory Nordic Q3 2025
+      Sources: RBC/TD/CIBC Investor Days &amp; Q1 FY2026 Reports to Shareholders · ECB Q4 2025 supervisory data · S&amp;P Global Nordic Banking 9M 2024 · Revolut 2024 Annual Report · KBW Nasdaq Bank Index 2025 · McKinsey Global Banking Review 2024
     </div>
     <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
       <div class="legend">
+        <div class="leg"><div class="leg-dot c-canada"></div>Canada Big 6</div>
+        <div class="leg"><div class="leg-dot c-us"></div>US Banks</div>
+        <div class="leg"><div class="leg-dot c-eu"></div>EU Universal</div>
         <div class="leg"><div class="leg-dot c-fintech"></div>Neobanks</div>
         <div class="leg"><div class="leg-dot c-nordic"></div>Nordic</div>
-        <div class="leg"><div class="leg-dot c-canada"></div>Canada Big 6</div>
-        <div class="leg"><div class="leg-dot c-eu"></div>EU Universal</div>
-        <div class="leg"><div class="leg-dot c-us"></div>US Banks</div>
       </div>
       <div class="leg-note">Neobank ratios: admin cost / gross revenue — not directly comparable to bank CIR &nbsp;|&nbsp; All values adjusted where stated</div>
     </div>
   </div>
 
-</div>
+</div><!-- /slide -->
+
+<script>
+  function fitSlide() {
+    var slide = document.querySelector('.slide');
+    // Reset to measure natural height
+    slide.style.transform = 'translate(-50%, -50%)';
+    var sw = 1280;
+    var sh = slide.offsetHeight;
+    var scale = Math.min(
+      (window.innerWidth  - 16) / sw,
+      (window.innerHeight - 16) / sh
+    );
+    slide.style.transform = 'translate(-50%, -50%) scale(' + scale + ')';
+  }
+  document.addEventListener('DOMContentLoaded', fitSlide);
+  window.addEventListener('resize', fitSlide);
+</script>
 </body>
 </html>
