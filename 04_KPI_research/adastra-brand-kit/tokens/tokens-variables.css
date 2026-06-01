@@ -1,0 +1,128 @@
+/**
+ * Adastra Brand Tokens — Plain CSS Custom Properties
+ * ====================================================
+ * Framework-agnostic. Works in any HTML/CSS project — no Tailwind required.
+ *
+ * Usage in your CSS:
+ *   color: var(--color-ada-red);
+ *   background: var(--color-ada-blue);
+ *   font-size: var(--text-h1-size);
+ *   border-radius: var(--radius);
+ *
+ * All values are sourced from the official Adastra Brand Book.
+ *
+ * For Tailwind v4 projects, use tokens-tailwind.css instead.
+ */
+
+:root {
+
+  /* ── Core brand colours ─────────────────────────────────────────────────── */
+  /* Source: Adastra Brand Book pp.34–35 */
+
+  --color-ada-red:        #F9423A;    /* Adastra Red    — Pantone Warm Red C */
+  --color-ada-blue:       #163B6E;    /* Deep Blue      — Pantone 654 C      */
+  --color-ada-charcoal:   #424242;    /* Charcoal Gray  — Pantone 447 C      */
+  --color-ada-canvas:     #F4F4F4;    /* Light Gray     — Pantone 663 C      */
+  --color-white:          #FFFFFF;
+  --color-black:          #000000;
+
+  /* Red tints — verified pp.35 */
+  --color-ada-red-01:     #FA6861;    /* Pantone 2345 C */
+  --color-ada-red-02:     #FB8E89;    /* Pantone 2339 C */
+  --color-ada-red-03:     #FDB3B0;    /* Pantone 169 C  */
+  --color-ada-red-04:     #FED9D7;    /* Pantone 705 C  */
+
+  /* Deep Blue tints — verified pp.35 */
+  --color-ada-blue-01:    #1F549A;    /* Pantone 2133 C */
+  --color-ada-blue-02:    #7998C2;    /* Pantone 652 C  */
+  --color-ada-blue-03:    #A5BBD7;    /* Pantone 651 C  */
+  --color-ada-blue-04:    #D1DAE8;    /* Pantone 650 C  */
+
+  /* Charcoal tints — verified pp.35 */
+  --color-ada-gray-01:    #575757;    /* Pantone 425 C  */
+  --color-ada-gray-02:    #9D9D9D;    /* Pantone 422 C  */
+  --color-ada-gray-03:    #DADADA;    /* Pantone Cool Gray 1 C */
+
+  /* ── Typography ─────────────────────────────────────────────────────────── */
+  /*
+   * Brand font: Gotham (Hoefler & Co. — paid licence).
+   * Free web substitute: Montserrat — geometrically identical to Gotham,
+   * available free via Bunny Fonts (GDPR-safe):
+   *
+   *   <link rel="preconnect" href="https://fonts.bunny.net" />
+   *   <link href="https://fonts.bunny.net/css?family=montserrat:400,500,700&display=swap" rel="stylesheet" />
+   *
+   * Three brand weights only (Brand Book pp.43):
+   *   700 = Bold   → headlines, CTAs, labels
+   *   500 = Medium → subheads, body, UI text
+   *   400 = Book   → intro paragraphs, captions
+   *
+   * MINIMUM text size: 16px everywhere. No exceptions.
+   */
+  --font-sans:   "Montserrat", "Gotham", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:   ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type scale — pixel sizes */
+  --text-title-size:      3.5rem;     /* 56px — hero cover only            */
+  --text-h1-size:         2.625rem;   /* 42px — page headline              */
+  --text-h2-size:         2rem;       /* 32px — section heading            */
+  --text-h3-size:         1.5rem;     /* 24px — sub-section heading        */
+  --text-h4-size:         1.25rem;    /* 20px — card title / inline label  */
+  --text-body-lg-size:    1.25rem;    /* 20px — lead / intro paragraph     */
+  --text-body-md-size:    1rem;       /* 16px — default body copy          */
+  --text-body-sm-size:    1rem;       /* 16px — secondary body (min = 16px)*/
+  --text-caption-size:    1rem;       /* 16px — labels, metadata           */
+  --text-eyebrow-size:    1rem;       /* 16px — uppercase section label    */
+
+  /* Line heights */
+  --text-title-lh:        1.05;
+  --text-h1-lh:           1.1;
+  --text-h2-lh:           1.2;
+  --text-h3-lh:           1.25;
+  --text-h4-lh:           1.3;
+  --text-body-lg-lh:      1.6;
+  --text-body-md-lh:      1.6;
+  --text-body-sm-lh:      1.55;
+  --text-caption-lh:      1.5;
+  --text-eyebrow-lh:      1;
+
+  /* Letter spacing */
+  --text-title-ls:        -0.02em;
+  --text-h1-ls:           -0.015em;
+  --text-h2-ls:           -0.01em;
+  --text-eyebrow-ls:       0.08em;    /* eyebrows are uppercase + tracked  */
+
+  /* ── Border radius ───────────────────────────────────────────────────────── */
+  /*
+   * Adastra is geometric and angular — keep corners crisp, not bubbly.
+   * Source: Brand Book visual language (logo letterforms, illustration style).
+   */
+  --radius-none:   0;
+  --radius-sm:     2px;     /* chips, tags, code badges         */
+  --radius:        4px;     /* DEFAULT — buttons, inputs, cards */
+  --radius-lg:     6px;     /* cards, panels                    */
+  --radius-xl:     8px;     /* modals, large containers         */
+  --radius-pill:   999px;   /* pills, eyebrow labels            */
+  --radius-full:   9999px;  /* avatars, circle icons            */
+
+  /* ── Brand gradients ─────────────────────────────────────────────────────── */
+  /* Three official gradients — always 45°. Source: Brand Book pp.37 */
+  --gradient-brand-primary:    linear-gradient(45deg, #F9423A 0%, #163B6E 100%);
+  --gradient-brand-soft-red:   linear-gradient(45deg, #F9423A 0%, #FA6861 50%, #FDB3B0 100%);
+  --gradient-brand-light-gray: linear-gradient(45deg, #F4F4F4 0%, #DADADA 100%);
+
+  /* ── Shadows ─────────────────────────────────────────────────────────────── */
+  /* Neutral elevation only — no glow effects (not in brand book). */
+  --shadow-sm:          0 2px 8px rgba(216,216,216,0.6);
+  --shadow-card:        0 4px 20px rgba(216,216,216,0.8);
+  --shadow-elevated:    0 6px 24px rgba(216,216,216,0.9);
+  --shadow-deep:        0 24px 60px rgba(22,59,110,0.18), 0 0 0 1px rgba(255,255,255,0.05);
+
+  /* ── Motion ──────────────────────────────────────────────────────────────── */
+  --ease-ada-out:    cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-ada-in-out: cubic-bezier(0.6, 0, 0.2, 1);
+  --duration-120:    120ms;
+  --duration-220:    220ms;
+  --duration-360:    360ms;
+
+}

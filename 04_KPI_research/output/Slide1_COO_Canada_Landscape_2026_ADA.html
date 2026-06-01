@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Canadian FSI COO — Landscape 2026</title>
+<link rel="preconnect" href="https://fonts.bunny.net" />
+<link href="https://fonts.bunny.net/css?family=montserrat:400,500,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../adastra-brand-kit/tokens/tokens-variables.css" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-ada-canvas);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .slide {
+    width: 1280px;
+    min-width: 1280px;
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--color-ada-blue);
+    color: white;
+    padding: 20px 36px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-left { display: flex; flex-direction: column; gap: 4px; }
+  .header-eyebrow { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--color-ada-red); }
+  .header-title { font-size: 21px; font-weight: 700; color: #ffffff; }
+  .header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  .header-meta { font-size: 10.5px; color: var(--color-ada-blue-03); text-align: right; line-height: 1.8; }
+
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    flex: 1;
+    gap: 2px;
+    background: var(--color-ada-blue-04);
+    padding: 2px;
+    padding-bottom: 0;
+  }
+
+  .quadrant {
+    background: #ffffff;
+    padding: 18px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .q-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid;
+    margin-bottom: 2px;
+  }
+  .q1 .q-header { border-color: rgba(249,66,58,0.22); }
+  .q2 .q-header { border-color: rgba(22,59,110,0.22); }
+  .q3 .q-header { border-color: rgba(22,59,110,0.22); }
+  .q4 .q-header { border-color: rgba(249,66,58,0.22); }
+
+  .q-icon {
+    width: 30px; height: 30px; border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0;
+  }
+  .q1 .q-icon { background: var(--color-ada-red-04); }
+  .q2 .q-icon { background: var(--color-ada-blue-04); }
+  .q3 .q-icon { background: var(--color-ada-blue-04); }
+  .q4 .q-icon { background: var(--color-ada-red-04); }
+
+  .q-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
+  .q1 .q-title { color: var(--color-ada-red); }
+  .q2 .q-title { color: var(--color-ada-blue); }
+  .q3 .q-title { color: var(--color-ada-blue); }
+  .q4 .q-title { color: var(--color-ada-red); }
+
+  .themes { display: flex; flex-direction: column; gap: 7px; }
+
+  .theme {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .theme-bar {
+    width: 3px;
+    border-radius: var(--radius-sm);
+    min-height: 100%;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+  .q1 .theme-bar { background: var(--color-ada-red-02); }
+  .q2 .theme-bar { background: var(--color-ada-blue-02); }
+  .q3 .theme-bar { background: var(--color-ada-blue-02); }
+  .q4 .theme-bar { background: var(--color-ada-red-02); }
+
+  .theme-content { display: flex; flex-direction: column; gap: 2px; }
+  .theme-title { font-size: 12px; font-weight: 700; color: var(--color-ada-blue); }
+  .theme-desc { font-size: 11px; color: var(--color-ada-charcoal); line-height: 1.4; }
+
+  .tag {
+    display: inline-block; font-size: 9px; font-weight: 700;
+    padding: 1px 6px; border-radius: var(--radius-sm); margin-left: 6px;
+    vertical-align: middle; letter-spacing: 0.3px;
+  }
+  .tag-reg    { background: var(--color-ada-red-04); color: var(--color-ada-red); }
+  .tag-exec   { background: var(--color-ada-blue-04); color: var(--color-ada-blue); }
+  .tag-trend  { background: var(--color-ada-canvas); color: var(--color-ada-charcoal); }
+
+  /* AI STRIP */
+  .ai-strip {
+    background: #0B1E3D;
+    padding: 14px 28px;
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+  }
+  .ai-label {
+    display: flex; flex-direction: column; justify-content: center;
+    padding-right: 24px; margin-right: 24px;
+    border-right: 1px solid var(--color-ada-blue-01); min-width: 130px;
+  }
+  .ai-label-top { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--color-ada-red); margin-bottom: 3px; }
+  .ai-label-main { font-size: 16px; font-weight: 700; color: #ffffff; line-height: 1.2; }
+  .ai-label-sub { font-size: 10px; color: var(--color-ada-blue-03); margin-top: 3px; }
+
+  .ai-cards { display: flex; gap: 10px; flex: 1; align-items: stretch; }
+
+  .ai-card {
+    background: var(--color-ada-blue); border-radius: var(--radius);
+    padding: 10px 14px; flex: 1;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .ai-card-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-ada-red); }
+  .ai-card-items { display: flex; flex-direction: column; gap: 4px; }
+  .ai-item { font-size: 11px; color: var(--color-ada-blue-03); line-height: 1.4; display: flex; gap: 7px; }
+  .ai-item::before { content: '›'; color: var(--color-ada-red); font-weight: 700; flex-shrink: 0; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--color-ada-canvas); border-top: 1px solid var(--color-ada-gray-03);
+    padding: 7px 36px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-note { font-size: 9.5px; color: var(--color-ada-gray-02); }
+  .footer-legend { display: flex; gap: 14px; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 9.5px; color: var(--color-ada-charcoal); }
+  .legend-dot { width: 8px; height: 8px; border-radius: var(--radius-sm); }
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <div class="header">
+    <div class="header-left">
+      <div class="header-eyebrow">Chief Operating Officer &nbsp;·&nbsp; Canadian Financial Services &nbsp;·&nbsp; 2026</div>
+      <div class="header-title">What Is Keeping the Role Busy — Industry Landscape</div>
+    </div>
+    <div class="header-right">
+      <img src="../adastra-brand-kit/icons/logos/adastra-basic-white.svg" alt="Adastra" height="28" />
+      <div class="header-meta">
+        No institution-specific data &nbsp;|&nbsp; General landscape view<br>
+        Research: May 2026
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <!-- Q1: Cost & Efficiency -->
+    <div class="quadrant q1">
+      <div class="q-header">
+        <div class="q-icon">💰</div>
+        <div class="q-title">Cost &amp; Efficiency</div>
+      </div>
+      <div class="themes">
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">Delivering on efficiency ratio commitments<span class="tag tag-exec">Executive Mandate</span></div>
+            <div class="theme-desc">COOs under board pressure to demonstrate measurable cost improvement — targets set at Investor Days are now active delivery obligations for 2026.</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">From transformation to execution discipline<span class="tag tag-trend">Sector Trend</span></div>
+            <div class="theme-desc">Multi-year transformation programs are expected to show productivity returns. COOs are shifting focus from program launch to measurable output and operating leverage.</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">Cloud migration as a cost lever<span class="tag tag-trend">Sector Trend</span></div>
+            <div class="theme-desc">Workload migration from on-premise to cloud is delivering ~30% cost reduction for institutions that have progressed — now a mainstream efficiency strategy, not a future investment.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2: Operational Resilience -->
+    <div class="quadrant q2">
+      <div class="q-header">
+        <div class="q-icon">🛡</div>
+        <div class="q-title">Operational Resilience</div>
+      </div>
+      <div class="themes">
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">OSFI E-21 — full compliance by September 2026<span class="tag tag-reg">Hard Deadline</span></div>
+            <div class="theme-desc">Institutions must identify critical operations, define impact tolerances, run scenario tests, and document recovery plans. Non-compliance is a regulatory risk, not just a programme gap.</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">Third-party risk under OSFI B-10<span class="tag tag-reg">Regulatory</span></div>
+            <div class="theme-desc">Scope expanded beyond outsourcing to all vendor and partner arrangements. Legacy contracts being re-assessed for risk classification, documentation and ongoing monitoring obligations.</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">Cybersecurity as operational continuity<span class="tag tag-exec">Executive Mandate</span></div>
+            <div class="theme-desc">Cybersecurity investment is now framed as an operational continuity issue — COOs co-own it alongside CISOs. Unified security platforms and AI-powered threat detection are the dominant investment theme.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3: People & Org Change -->
+    <div class="quadrant q3">
+      <div class="q-header">
+        <div class="q-icon">👥</div>
+        <div class="q-title">People &amp; Org Change</div>
+      </div>
+      <div class="themes">
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">COO operating model redesign<span class="tag tag-exec">Executive Mandate</span></div>
+            <div class="theme-desc">Branch and service centre models are being restructured — away from transactional delivery toward advice and exception-handling. Operational headcount is being redeployed, not just reduced.</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">Workforce reskilling obligation<span class="tag tag-trend">Sector Trend</span></div>
+            <div class="theme-desc">59% of Canadian C-suite leaders expect many current employee skills to be obsolete by 2030. COOs carry the accountability for managing this transition — including pace, scope, and people impact.</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">Leadership continuity risk at the COO level<span class="tag tag-trend">Sector Trend</span></div>
+            <div class="theme-desc">Significant COO-level turnover across Canadian FSI in 2025–2026. Multiple institutions have either new COOs, vacant roles, or restructured operational accountability — increasing execution risk.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4: Digital & Payments -->
+    <div class="quadrant q4">
+      <div class="q-header">
+        <div class="q-icon">⚡</div>
+        <div class="q-title">Digital &amp; Payments Infrastructure</div>
+      </div>
+      <div class="themes">
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">Real-Time Rail readiness (RTR)<span class="tag tag-reg">Hard Deadline</span></div>
+            <div class="theme-desc">Payments Canada targeting Q3 2026 RTR launch. COOs accountable for core system integration, ISO 20022 readiness, and 24/7 operational capability — implementation risk is high for legacy-heavy institutions.</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">Open Banking — architecture investment now<span class="tag tag-reg">Regulatory</span></div>
+            <div class="theme-desc">Consumer-Driven Banking Act (Royal Assent Mar 2026) sets read-access Phase 1 for 2026, write-access Phase 2 for mid-2027. COOs must build API infrastructure ahead of accreditation timelines.</div>
+          </div>
+        </div>
+        <div class="theme">
+          <div class="theme-bar"></div>
+          <div class="theme-content">
+            <div class="theme-title">Core system modernisation<span class="tag tag-exec">Executive Mandate</span></div>
+            <div class="theme-desc">RTR, Open Banking, and real-time data demands are accelerating the case for core banking replacement or wrapping. COOs managing build-vs-wrap decisions with significant multi-year cost implications.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AI STRIP -->
+  <div class="ai-strip">
+    <div class="ai-label">
+      <div class="ai-label-top">Dedicated Focus</div>
+      <div class="ai-label-main">AI &amp;<br>Automation</div>
+      <div class="ai-label-sub">Cross-sector themes</div>
+    </div>
+    <div class="ai-cards">
+      <div class="ai-card">
+        <div class="ai-card-title">From Pilots to Value Delivery</div>
+        <div class="ai-card-items">
+          <div class="ai-item">AI value targets are now formal board commitments — COOs accountable for translating tech investment into measurable $ productivity and cost reduction</div>
+          <div class="ai-item">Sector is bifurcating: institutions capturing AI value vs. those still in pilot mode. PwC Canada flags inconsistency in enterprise-scale deployment</div>
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-title">Operational Use Cases In Production</div>
+        <div class="ai-card-items">
+          <div class="ai-item">Mortgage adjudication, fraud detection, AML monitoring, document processing, and customer service triage are active deployments — not roadmap items</div>
+          <div class="ai-item">AI-powered processing time reductions measured in hours-to-minutes for credit and compliance workflows</div>
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-title">Structural Implications for COOs</div>
+        <div class="ai-card-items">
+          <div class="ai-item">AI is being separated from T&amp;O as a standalone function at leading institutions — COO scope is being redefined accordingly</div>
+          <div class="ai-item">Citi: 54% of finance roles face AI-led displacement risk by 2029 — highest of any major industry. Workforce design is now a core COO responsibility</div>
+          <div class="ai-item">Gartner: 0% of IT work without AI augmentation by 2030; 25% by AI alone — headcount models require fundamental rethinking</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-note">Sources: OSFI E-21/B-10, Capgemini Top Trends 2026, Massey Henry Canadian Executive Survey, PwC Canada, Citi Research, Gartner Nov 2025, Payments Canada, DLA Piper (Consumer-Driven Banking Act), FSC Canada Workforce Report Sep 2025</div>
+    <div class="footer-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--color-ada-red-04);border:1px solid var(--color-ada-red)"></div>Hard deadline / Regulatory</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--color-ada-blue-04);border:1px solid var(--color-ada-blue)"></div>Executive mandate</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--color-ada-canvas);border:1px solid var(--color-ada-gray-02)"></div>Sector trend</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
